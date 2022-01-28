@@ -1,6 +1,7 @@
 n, m = map(int, input().split())
 #방문 여부
 visit = [[0]*m for _ in range(n)] #방문한 경우 1, 아직 가보지 않은 경우 0
+#2차원 리스트의 초기화 방법, 리스트 컴프리헨션 문법
 
 row, col, d = map(int, input().split())
 
@@ -24,11 +25,11 @@ while True:
   next_row = row + drow[d]
   next_col = col + dcol[d]
 
-  if game_map[next_row][next_col] == 0 and visit[next_row][next_col] == 0:
+  if game_map[next_row][next_col] == 0 and visit[next_row][next_col] == 0: #이동이 가능한 경우
     visit[next_row][next_col] = 1
     row = next_row
     col = next_col
-    first_direction = d #이동후 기준 방향
+    first_direction = d #이동 후 기준 방향
     count += 1
     continue
   
