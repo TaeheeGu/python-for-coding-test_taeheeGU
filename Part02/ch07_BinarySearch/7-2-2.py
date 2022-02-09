@@ -10,11 +10,12 @@ array_M = list(map(int, sys.stdin.readline().split()))
 count_array = [0] * 1_000_001 #n의 범위 1부터 1,000,000 까지
 #count_array = [0] * (max(array_N)+1)
 
-for i in array_N:
+for i in array_N: #O(N)
   count_array[i] += 1
 
-for i in array_M:
+for i in array_M: #O(M)
   if count_array[i] == 0:
     print('no', end=' ')
   else:
     print('yes', end=' ')
+#O(N+M)
