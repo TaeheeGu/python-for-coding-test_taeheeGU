@@ -31,7 +31,7 @@ def dijkstra(start): #다익스트라 알고리즘
   distance[start] = 0 #시작 노드 초기화
   visited[start] = True #시작 노드 방문처리
   for i in graph[start]: #시작 노드에 연결된 노드들의 거리 입력
-    distance[i[0]] = i[1]
+    distance[i[0]] = i[1] #i[0] => 노드 번호, i[1] => start와 연결된 노드 거리
 
   for _ in range(n-1): #시작 노드를 제외한 n-1개의 노드에 대해 반복
     now = get_smallest_node() #현재 최단 거리가 가장 짧은 노드
