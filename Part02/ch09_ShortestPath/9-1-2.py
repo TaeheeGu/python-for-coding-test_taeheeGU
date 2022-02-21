@@ -32,7 +32,7 @@ def dijkstra(start):
       cost = dist + i[1] #현재 노드를 거쳐서 인접 노드로 가는 비용
       if cost < distance[i[0]]: #현재 노드를 거쳐서 인접 노드로 가는 거리가 더 짧은 경우
         distance[i[0]] = cost #해당 노드의 최단 거리 갱신
-        heapq.heappush(q, (cost, i[0])) #갱신된 노드의 정버(거리, 번호)를 큐에 삽입
+        heapq.heappush(q, (cost, i[0])) #갱신된 노드의 정보(거리, 번호)를 큐에 삽입
 
 dijkstra(start)
 
